@@ -76,7 +76,7 @@ function Update:Window(text, logo, savefolder)
     local FileName = savefolder.."/Settings.json"
     local GUISettings = {
         keybind = Enum.KeyCode.RightControl,
-        yoo = string.gsub(tostring(GUISettings.keybind), "Enum.KeyCode.", "")
+        yoo = string.gsub(tostring(keybind), "Enum.KeyCode.", "")
     }
     if isfile(FileName) then
         GUISettings = HttpService:JSONDecode(readfile(FileName))
