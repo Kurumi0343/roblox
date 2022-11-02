@@ -70,6 +70,9 @@ end
 
 local Update = {}
 function Update:Window(text, logo, savefolder)
+    if not isfolder(savefolder) then 
+         makefolder(savefolder)
+    end
     local FileName = savefolder.."/Settings.json"
     local GUISettings = {
         keybind = Enum.KeyCode.RightControl,
@@ -159,9 +162,6 @@ function Update:Window(text, logo, savefolder)
     BindButton.Text = "[ " .. string.gsub(tostring(GUISettings.keybind), "Enum.KeyCode.", "") .. " ]"
     BindButton.TextColor3 = Color3.fromRGB(100, 100, 100)
     BindButton.TextSize = 11.000
-    if not isfolder(savefolder) then 
-        makefolder(savefolder)
-    end
     BindButton.MouseButton1Click:Connect(
         function()
             BindButton.Text = "[ ... ]"
