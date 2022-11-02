@@ -71,6 +71,7 @@ end
 local Update = {}
 function Update:Window(text, logo, savefolder)
     local FileName = savefolder.."/Settings.txt"
+    
     local uihide = false
     local abc = false
     local logo = logo or 0
@@ -153,7 +154,9 @@ function Update:Window(text, logo, savefolder)
     BindButton.Text = "[ " .. string.gsub(tostring(keybind), "Enum.KeyCode.", "") .. " ]"
     BindButton.TextColor3 = Color3.fromRGB(100, 100, 100)
     BindButton.TextSize = 11.000
-
+    if not isfolder(savefolder) then 
+        makefolder(savefolder)
+    end
     BindButton.MouseButton1Click:Connect(
         function()
             BindButton.Text = "[ ... ]"
@@ -253,17 +256,12 @@ function Update:Window(text, logo, savefolder)
     )
     local uitab = {}
     function uitab:saveSettings(table)
-        if not isfolder(savefolder) then 
-            makefolder(savefolder)
-        end
         local json
             json = HttpService:JSONEncode(table);
             writefile(FileName,tostring(json))
     end
     function uitab:loadSettings(table)
-        pcall(function()
             table = HttpService:JSONDecode(readfile(FileName))
-        end)
     end
     function uitab:Tab(text)
         local TabButton = Instance.new("TextButton")
