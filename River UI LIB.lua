@@ -152,6 +152,7 @@ function Update:Window(text, logo, savefolder)
     Hub.TextSize = 17.000
     Hub.TextXAlignment = Enum.TextXAlignment.Left
 
+    
     local BindButton = Instance.new("TextButton")
     BindButton.Name = "BindButton"
     BindButton.Parent = Top
