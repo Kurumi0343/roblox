@@ -71,13 +71,18 @@ end
 local Update = {}
 function Update:Window(text, logo, savefolder)
     local FileName = savefolder.."/Settings.txt"
-    
+    local GUISettings = {
+        keybind = Enum.KeyCode.RightControl,
+        yoo = string.gsub(tostring(GUISettings.keybind), "Enum.KeyCode.", "")
+    }
+    if isfile(FileName) then
+        GUISettings = HttpService:JSONDecode(readfile(FileName))
+    end
+    local json
     local uihide = false
     local abc = false
     local logo = logo or 0
     local currentpage = ""
-    local keybind = Enum.KeyCode.RightControl
-    local yoo = string.gsub(tostring(keybind), "Enum.KeyCode.", "")
 
     local ThreadReaper = Instance.new("ScreenGui")
     ThreadReaper.Name = "ThreadReaper"
@@ -151,7 +156,7 @@ function Update:Window(text, logo, savefolder)
     BindButton.Position = UDim2.new(0.847561002, 0, 0, 0)
     BindButton.Size = UDim2.new(0, 100, 0, 27)
     BindButton.Font = Enum.Font.GothamSemibold
-    BindButton.Text = "[ " .. string.gsub(tostring(keybind), "Enum.KeyCode.", "") .. " ]"
+    BindButton.Text = "[ " .. string.gsub(tostring(GUISettings.keybind), "Enum.KeyCode.", "") .. " ]"
     BindButton.TextColor3 = Color3.fromRGB(100, 100, 100)
     BindButton.TextSize = 11.000
     if not isfolder(savefolder) then 
@@ -165,8 +170,10 @@ function Update:Window(text, logo, savefolder)
 
             if shiba.Name ~= "Focus" and shiba.Name ~= "MouseMovement" then
                 BindButton.Text = "[ " .. shiba.Name .. " ]"
-                yoo = shiba.Name
+                GUISettings.yoo = shiba.Name
             end
+            json = HttpService:JSONEncode(GUISettings);
+            writefile(FileName,tostring(GUISettings))
         end
     )
 
@@ -243,7 +250,7 @@ function Update:Window(text, logo, savefolder)
 
     UserInputService.InputBegan:Connect(
         function(input)
-            if input.KeyCode == Enum.KeyCode[yoo] then
+            if input.KeyCode == Enum.KeyCode[GUISettings.yoo] then
                 if uihide == false then
                     uihide = true
                     Main:TweenSize(UDim2.new(0, 0, 0, 0), "In", "Quad", 0.4, true)
@@ -255,14 +262,6 @@ function Update:Window(text, logo, savefolder)
         end
     )
     local uitab = {}
-    function uitab:saveSettings(table)
-        local json
-            json = HttpService:JSONEncode(table);
-            writefile(FileName,tostring(json))
-    end
-    function uitab:loadSettings(table)
-            table = HttpService:JSONDecode(readfile(FileName))
-    end
     function uitab:Tab(text)
         local TabButton = Instance.new("TextButton")
         TabButton.Parent = ScrollTab
