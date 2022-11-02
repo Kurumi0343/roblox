@@ -665,51 +665,53 @@ function Update:Window(text, logo, savefolder)
 
             local dropfunc = {}
             function dropfunc:Add(t)
-                local Item = Instance.new("TextButton")
-                Item.Name = "Item"
-                Item.Parent = DropScroll
-                Item.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-                Item.BackgroundTransparency = 1.000
-                Item.Size = UDim2.new(0, 470, 0, 26)
-                Item.Font = Enum.Font.GothamSemibold
-                Item.Text = tostring(t)
-                Item.TextColor3 = Color3.fromRGB(225, 225, 225)
-                Item.TextSize = 13.000
-                Item.TextTransparency = 0.500
-
-                Item.MouseEnter:Connect(
-                    function()
-                        TweenService:Create(
-                            Item,
-                            TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                            {TextTransparency = 0}
-                        ):Play()
-                    end
-                )
-
-                Item.MouseLeave:Connect(
-                    function()
-                        TweenService:Create(
-                            Item,
-                            TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                            {TextTransparency = 0.5}
-                        ):Play()
-                    end
-                )
-
-                Item.MouseButton1Click:Connect(
-                    function()
-                        isdropping = false
-                        Dropdown:TweenSize(UDim2.new(0, 470, 0, 31), "Out", "Quad", 0.3, true)
-                        TweenService:Create(
-                            DropImage,
-                            TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                            {Rotation = 180}
-                        ):Play()
-                        callback(Item.Text)
-                        DropTitle.Text = text .. " : " .. Item.Text
-                    end
-                )
+                for i,v in next,t do
+                    local Item = Instance.new("TextButton")
+                    Item.Name = "Item"
+                    Item.Parent = DropScroll
+                    Item.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                    Item.BackgroundTransparency = 1.000
+                    Item.Size = UDim2.new(0, 470, 0, 26)
+                    Item.Font = Enum.Font.GothamSemibold
+                    Item.Text = tostring(v)
+                    Item.TextColor3 = Color3.fromRGB(225, 225, 225)
+                    Item.TextSize = 13.000
+                    Item.TextTransparency = 0.500
+    
+                    Item.MouseEnter:Connect(
+                        function()
+                            TweenService:Create(
+                                Item,
+                                TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+                                {TextTransparency = 0}
+                            ):Play()
+                        end
+                    )
+    
+                    Item.MouseLeave:Connect(
+                        function()
+                            TweenService:Create(
+                                Item,
+                                TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+                                {TextTransparency = 0.5}
+                            ):Play()
+                        end
+                    )
+    
+                    Item.MouseButton1Click:Connect(
+                        function()
+                            isdropping = false
+                            Dropdown:TweenSize(UDim2.new(0, 470, 0, 31), "Out", "Quad", 0.3, true)
+                            TweenService:Create(
+                                DropImage,
+                                TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+                                {Rotation = 180}
+                            ):Play()
+                            callback(Item.Text)
+                            DropTitle.Text = text .. " : " .. Item.Text
+                        end
+                    )
+                end
             end
             function dropfunc:Clear()
                 DropTitle.Text = tostring(text) .. " : "
