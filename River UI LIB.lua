@@ -75,7 +75,6 @@ function Update:Window(text, logo, savefolder)
     end
     local FileName = savefolder.."/Settings.json"
     local GUISettings = {
-        keybind = Enum.KeyCode.RightControl,
         yoo = string.gsub(tostring(Enum.KeyCode.RightControl), "Enum.KeyCode.", "")
     }
     if isfile(FileName) then
@@ -161,7 +160,7 @@ function Update:Window(text, logo, savefolder)
     BindButton.Position = UDim2.new(0.847561002, 0, 0, 0)
     BindButton.Size = UDim2.new(0, 100, 0, 27)
     BindButton.Font = Enum.Font.GothamSemibold
-    BindButton.Text = "[ " .. string.gsub(tostring(GUISettings.keybind), "Enum.KeyCode.", "") .. " ]"
+    BindButton.Text = "[ " .. string.gsub(tostring(yoo), "Enum.KeyCode.", "") .. " ]"
     BindButton.TextColor3 = Color3.fromRGB(100, 100, 100)
     BindButton.TextSize = 11.000
     BindButton.MouseButton1Click:Connect(
