@@ -510,7 +510,7 @@ function Update:Window(text, logo, savefolder)
                 pcall(callback, toggled)
             end
         end
-        function main:Dropdown(text, option, callback)
+        function main:Dropdown(text, option, value, callback)
             local isdropping = false
             local Dropdown = Instance.new("Frame")
             local UICorner = Instance.new("UICorner")
@@ -536,7 +536,7 @@ function Update:Window(text, logo, savefolder)
             DropTitle.BackgroundTransparency = 1.000
             DropTitle.Size = UDim2.new(0, 470, 0, 31)
             DropTitle.Font = Enum.Font.GothamSemibold
-            DropTitle.Text = text .. " : "
+            DropTitle.Text = text .. " : " .. value 
             DropTitle.TextColor3 = Color3.fromRGB(225, 225, 225)
             DropTitle.TextSize = 15.000
 
