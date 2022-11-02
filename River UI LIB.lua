@@ -59,6 +59,7 @@ end
 
 local Update = {}
 
+
 function Update:Window(text,logo,keybind)
 	local uihide = false
 	local abc = false
@@ -67,14 +68,14 @@ function Update:Window(text,logo,keybind)
 	local keybind = keybind or Enum.KeyCode.RightControl
 	local yoo = string.gsub(tostring(keybind),"Enum.KeyCode.","")
 	
-	local SOMEXHUB = Instance.new("ScreenGui")
-	SOMEXHUB.Name = "ThreadReaper"
-	SOMEXHUB.Parent = game.CoreGui
-	SOMEXHUB.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	local ThreadReaper = Instance.new("ScreenGui")
+	ThreadReaper.Name = "ThreadReaper"
+	ThreadReaper.Parent = game.CoreGui
+	ThreadReaper.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 	local Main = Instance.new("Frame")
 	Main.Name = "Main"
-	Main.Parent = SOMEXHUB
+	Main.Parent = ThreadReaper
 	Main.ClipsDescendants = true
 	Main.AnchorPoint = Vector2.new(0.5,0.5)
 	Main.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
