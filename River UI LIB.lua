@@ -139,18 +139,6 @@ function Update:Window(text, logo, savefolder)
     Name.TextColor3 = Color3.fromRGB(225, 225, 225)
     Name.TextSize = 17.000
 
-    local Hub = Instance.new("TextLabel")
-    Hub.Name = "Hub"
-    Hub.Parent = Top
-    Hub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    Hub.BackgroundTransparency = 1.000
-    Hub.Position = UDim2.new(0, 110, 0, 0)
-    Hub.Size = UDim2.new(0, 81, 0, 27)
-    Hub.Font = Enum.Font.GothamSemibold
-    Hub.TextColor3 = _G.Color
-    Hub.TextSize = 17.000
-    Hub.TextXAlignment = Enum.TextXAlignment.Left
-
     local BindButton = Instance.new("TextButton")
     BindButton.Name = "BindButton"
     BindButton.Parent = Top
