@@ -79,7 +79,9 @@ function Update:Window(text, logo, savefolder)
         yoo = string.gsub(tostring(Enum.KeyCode.RightControl), "Enum.KeyCode.", "")
     }
     if isfile(FileName) then
-        GUISettings = HttpService:JSONDecode(readfile(FileName))
+        pcall(function()
+             GUISettings = HttpService:JSONDecode(readfile(FileName))
+        end)
     end
     local json
     local uihide = false
@@ -173,7 +175,7 @@ function Update:Window(text, logo, savefolder)
                 GUISettings.yoo = shiba.Name
             end
             json = HttpService:JSONEncode(GUISettings);
-            writefile(FileName,tostring(GUISettings))
+            writefile(FileName,tostring(json))
         end
     )
 
