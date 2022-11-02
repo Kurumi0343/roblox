@@ -70,7 +70,7 @@ end
 
 local Update = {}
 function Update:Window(text, logo, savefolder)
-    local FileName = savefolder.."/Settings.txt"
+    local FileName = savefolder.."/Settings.json"
     local GUISettings = {
         keybind = Enum.KeyCode.RightControl,
         yoo = string.gsub(tostring(GUISettings.keybind), "Enum.KeyCode.", "")
