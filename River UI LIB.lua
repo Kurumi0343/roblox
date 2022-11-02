@@ -147,12 +147,10 @@ function Update:Window(text, logo, savefolder)
     Hub.Position = UDim2.new(0, 110, 0, 0)
     Hub.Size = UDim2.new(0, 81, 0, 27)
     Hub.Font = Enum.Font.GothamSemibold
-    Hub.Text = ""
     Hub.TextColor3 = _G.Color
     Hub.TextSize = 17.000
     Hub.TextXAlignment = Enum.TextXAlignment.Left
 
-    
     local BindButton = Instance.new("TextButton")
     BindButton.Name = "BindButton"
     BindButton.Parent = Top
