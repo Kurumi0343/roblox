@@ -547,7 +547,7 @@ function Update:Window(text, logo, savefolder)
             DropScroll.BackgroundTransparency = 1.000
             DropScroll.BorderSizePixel = 0
             DropScroll.Position = UDim2.new(0, 0, 0, 31)
-            DropScroll.Size = UDim2.new(0, 470, 0, 50)
+            DropScroll.Size = UDim2.new(0, 470, 0, 100)
             DropScroll.CanvasSize = UDim2.new(0, 0, 0, 0)
             DropScroll.ScrollBarThickness = 3
 
