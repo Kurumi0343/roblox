@@ -69,7 +69,7 @@ local function MakeDraggable(topbarobject, object)
 end
 
 local Update = {}
-function Update:Window(text, logo, savefolder)
+function Update:Window(text, savefolder)
     if not isfolder(savefolder) then 
          makefolder(savefolder)
     end
@@ -116,15 +116,6 @@ function Update:Window(text, logo, savefolder)
     local TCNR = Instance.new("UICorner")
     TCNR.Name = "TCNR"
     TCNR.Parent = Top
-
-    local Logo = Instance.new("ImageLabel")
-    Logo.Name = "Logo"
-    Logo.Parent = Top
-    Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    Logo.BackgroundTransparency = 1.000
-    Logo.Position = UDim2.new(0, 10, 0, 1)
-    Logo.Size = UDim2.new(0, 25, 0, 25)
-    Logo.Image = logo
 
     local Name = Instance.new("TextLabel")
     Name.Name = "Name"
@@ -202,7 +193,7 @@ function Update:Window(text, logo, savefolder)
     Page.Parent = Main
     Page.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
     Page.Position = UDim2.new(0.245426834, 0, 0.075000003, 0)
-    Page.Size = UDim2.new(0, 490, 0, 355)
+    Page.Size = UDim2.new(0, 490, 0, 360)
 
     local PCNR = Instance.new("UICorner")
     PCNR.Name = "PCNR"
@@ -214,7 +205,7 @@ function Update:Window(text, logo, savefolder)
     MainPage.ClipsDescendants = true
     MainPage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     MainPage.BackgroundTransparency = 1.000
-    MainPage.Size = UDim2.new(0, 490, 0, 355)
+    MainPage.Size = UDim2.new(0, 490, 0, 360)
 
     local PageList = Instance.new("Folder")
     PageList.Name = "PageList"
