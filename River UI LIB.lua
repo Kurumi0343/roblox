@@ -203,7 +203,7 @@ function Update:Window(text, logo, savefolder)
     Page.Parent = Main
     Page.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
     Page.Position = UDim2.new(0.245426834, 0, 0.075000003, 0)
-    Page.Size = UDim2.new(0, 490, 0, 365)
+    Page.Size = UDim2.new(0, 490, 0, 355)
 
     local PCNR = Instance.new("UICorner")
     PCNR.Name = "PCNR"
@@ -215,7 +215,7 @@ function Update:Window(text, logo, savefolder)
     MainPage.ClipsDescendants = true
     MainPage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     MainPage.BackgroundTransparency = 1.000
-    MainPage.Size = UDim2.new(0, 490, 0, 365)
+    MainPage.Size = UDim2.new(0, 490, 0, 355)
 
     local PageList = Instance.new("Folder")
     PageList.Name = "PageList"
