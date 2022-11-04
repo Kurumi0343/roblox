@@ -170,7 +170,7 @@ function Update:Window(text, logo, savefolder)
     Tab.Parent = Main
     Tab.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
     Tab.Position = UDim2.new(0, 5, 0, 30)
-    Tab.Size = UDim2.new(0, 150, 0, 365)
+    Tab.Size = UDim2.new(0, 150, 0, 325)
 
     local TCNR = Instance.new("UICorner")
     TCNR.Name = "TCNR"
@@ -182,7 +182,7 @@ function Update:Window(text, logo, savefolder)
     ScrollTab.Active = true
     ScrollTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     ScrollTab.BackgroundTransparency = 1.000
-    ScrollTab.Size = UDim2.new(0, 150, 0, 365)
+    ScrollTab.Size = UDim2.new(0, 150, 0, 325)
     ScrollTab.CanvasSize = UDim2.new(0, 0, 0, 0)
     ScrollTab.ScrollBarThickness = 0
 
@@ -233,6 +233,70 @@ function Update:Window(text, logo, savefolder)
     UIPageLayout.GamepadInputEnabled = false
     UIPageLayout.ScrollWheelInputEnabled = false
     UIPageLayout.TouchInputEnabled = false
+
+    local ProfileBar = Instance.new("Frame")
+	ProfileBar.Name = "ProfileBar"
+	ProfileBar.Parent = Tab
+	ProfileBar.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	ProfileBar.Size = UDim2.new(0, 150, 0, 30)
+	ProfileBar.Position = UDim2.new(0, 0, 1.02, 0)
+
+	local PBCR = Instance.new("UICorner")
+	PBCR.Name = "PBCR"
+	PBCR.Parent = ProfileBar
+
+	local UserIcon = Instance.new("Frame")
+	UserIcon.Name = "UserIcon"
+	UserIcon.Parent = ProfileBar
+	UserIcon.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	UserIcon.BackgroundTransparency = 1
+	UserIcon.BorderSizePixel = 0
+	UserIcon.Position = UDim2.new(0.05, 0, 0.1, 0)
+	UserIcon.Size = UDim2.new(0, 25, 0, 25)
+
+	local UserImage = Instance.new("ImageLabel")
+	UserImage.Name = "UserImage"
+	UserImage.Parent = UserIcon
+	UserImage.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	UserImage.BackgroundTransparency = 1.000
+	UserImage.Size = UDim2.new(0, 25, 0, 25)
+	UserImage.Image = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. game.Players.LocalPlayer.UserId .. "&width=420&height=420&format=png"
+
+	local UserCircleImage = Instance.new("ImageLabel")
+	UserCircleImage.Name = "UserImage"
+	UserCircleImage.Parent = UserImage
+	UserCircleImage.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	UserCircleImage.BackgroundTransparency = 1.000
+	UserCircleImage.ImageColor3 = Color3.fromRGB(23, 23, 23)
+	UserCircleImage.Size = UDim2.new(0, 25, 0, 25)
+	UserCircleImage.Image = "rbxassetid://4031889928"
+	UserCircleImage.ImageColor3 = Color3.fromRGB(35, 35, 35)
+
+    local UserNameLabel = Instance.new("TextLabel")
+	UserNameLabel.Name = "UserNameLabel"
+	UserNameLabel.Parent = ProfileBar
+	UserNameLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	UserNameLabel.BackgroundTransparency = 1.000
+	UserNameLabel.Size = UDim2.new(0, 81, 0, 27)
+	UserNameLabel.Font = Enum.Font.GothamBold
+	UserNameLabel.Text = game.Players.LocalPlayer.DisplayName
+	UserNameLabel.Position = UDim2.new(0.30, 0, -0.2, 0)
+	UserNameLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+	UserNameLabel.TextSize = 11.00000
+	UserNameLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+	local UserTagLabel = Instance.new("TextLabel")
+	UserTagLabel.Name = "UserTagLabel"
+	UserTagLabel.Parent = ProfileBar
+	UserTagLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	UserTagLabel.BackgroundTransparency = 1.000
+	UserTagLabel.Size = UDim2.new(0, 81, 0, 27)
+	UserTagLabel.Font = Enum.Font.GothamSemibold
+	UserTagLabel.Text = "#"..tostring(math.random(0001, 9999))
+	UserTagLabel.Position = UDim2.new(0.30, 0, 0.2, 0)
+	UserTagLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+	UserTagLabel.TextSize = 10.00000
+	UserTagLabel.TextXAlignment = Enum.TextXAlignment.Left
 
     MakeDraggable(Top, Main)
 
