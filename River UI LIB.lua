@@ -652,14 +652,15 @@ function Update:Window(text, logo, savefolder)
             )
 
             local dropfunc = {}
-            function dropfunc:Add(t)
-                for i,v in next,t do
+            function dropfunc:Add(table)
+                for i, v in next, table do
                     local Item = Instance.new("TextButton")
+    
                     Item.Name = "Item"
                     Item.Parent = DropScroll
                     Item.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                     Item.BackgroundTransparency = 1.000
-                    Item.Size = UDim2.new(0, 470, 0, 26)
+                    Item.Size = UDim2.new(0, 460, 0, 26)
                     Item.Font = Enum.Font.GothamSemibold
                     Item.Text = tostring(v)
                     Item.TextColor3 = Color3.fromRGB(225, 225, 225)
