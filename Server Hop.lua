@@ -3,14 +3,14 @@ repeat wait() until game:IsLoaded()
 local Settings = {}
 local HttpService = game:GetService("HttpService")
 
-local SaveFileName = "seahubjoin.json"
+local SaveFileName = "ThreadReaper Server Hop.json"
 
 function SaveSettings()
   local HttpService = game:GetService("HttpService")
-  if not isfolder("Sea Hub") then
-      makefolder("Sea Hub")
+  if not isfolder("ThreadReaper") then
+      makefolder("ThreadReaper")
   end
-  writefile("Sea Hub/" .. SaveFileName, HttpService:JSONEncode(Settings))
+  writefile("ThreadReaper/" .. SaveFileName, HttpService:JSONEncode(Settings))
 end
 
 function ReadSetting()
@@ -19,7 +19,7 @@ function ReadSetting()
       if not isfolder("Sea Hub") then
           makefolder("Sea Hub")
       end
-      return HttpService:JSONDecode(readfile("Sea Hub/" .. SaveFileName))
+      return HttpService:JSONDecode(readfile("ThreadReaper/" .. SaveFileName))
   end)
   if s then return e
   else
