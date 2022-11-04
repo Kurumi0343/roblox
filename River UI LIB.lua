@@ -435,7 +435,7 @@ function Update:Window(text, logo, savefolder)
             TextBtn.Size = UDim2.new(0, 468, 0, 29)
             TextBtn.AutoButtonColor = false
             TextBtn.Font = Enum.Font.GothamSemibold
-            TextBtn.Text = text.." Hotkey [ "..Key.." ]"
+            TextBtn.Text = text.." [ "..Key.." ]"
             TextBtn.TextColor3 = Color3.fromRGB(225, 225, 225)
             TextBtn.TextSize = 15.000
 
