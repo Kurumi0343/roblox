@@ -85,7 +85,6 @@ function Update:Window(text, logo, savefolder)
     local json
     local uihide = false
     local abc = false
-    local logo = logo or 0
     local currentpage = ""
 
     local ThreadReaper = Instance.new("ScreenGui")
@@ -125,7 +124,7 @@ function Update:Window(text, logo, savefolder)
     Logo.BackgroundTransparency = 1.000
     Logo.Position = UDim2.new(0, 10, 0, 1)
     Logo.Size = UDim2.new(0, 25, 0, 25)
-    Logo.Image = "rbxassetid://" .. tostring(logo)
+    Logo.Image = logo
 
     local Name = Instance.new("TextLabel")
     Name.Name = "Name"
