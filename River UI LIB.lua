@@ -412,6 +412,84 @@ function Update:Window(text, logo, savefolder)
                 end
             )
         end
+        function main:ButtonHotkey(text, Key, callback)
+            local Button = Instance.new("Frame")
+            local UICorner = Instance.new("UICorner")
+            local TextBtn = Instance.new("TextButton")
+            local UICorner_2 = Instance.new("UICorner")
+            local Black = Instance.new("Frame")
+            local UICorner_3 = Instance.new("UICorner")
+
+            Button.Name = "Button"
+            Button.Parent = MainFramePage
+            Button.BackgroundColor3 = _G.Color
+            Button.Size = UDim2.new(0, 470, 0, 31)
+
+            UICorner.CornerRadius = UDim.new(0, 5)
+            UICorner.Parent = Button
+
+            TextBtn.Name = "TextBtn"
+            TextBtn.Parent = Button
+            TextBtn.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+            TextBtn.Position = UDim2.new(0, 1, 0, 1)
+            TextBtn.Size = UDim2.new(0, 468, 0, 29)
+            TextBtn.AutoButtonColor = false
+            TextBtn.Font = Enum.Font.GothamSemibold
+            TextBtn.Text = text.."[ "..Key.." ]"
+            TextBtn.TextColor3 = Color3.fromRGB(225, 225, 225)
+            TextBtn.TextSize = 15.000
+
+            UICorner_2.CornerRadius = UDim.new(0, 5)
+            UICorner_2.Parent = TextBtn
+
+            Black.Name = "Black"
+            Black.Parent = Button
+            Black.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+            Black.BackgroundTransparency = 1.000
+            Black.BorderSizePixel = 0
+            Black.Position = UDim2.new(0, 1, 0, 1)
+            Black.Size = UDim2.new(0, 468, 0, 29)
+
+            UICorner_3.CornerRadius = UDim.new(0, 5)
+            UICorner_3.Parent = Black
+
+            TextBtn.MouseEnter:Connect(
+                function()
+                    TweenService:Create(
+                        Black,
+                        TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+                        {BackgroundTransparency = 0.7}
+                    ):Play()
+                end
+            )
+            TextBtn.MouseLeave:Connect(
+                function()
+                    TweenService:Create(
+                        Black,
+                        TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+                        {BackgroundTransparency = 1}
+                    ):Play()
+                end
+            )
+            TextBtn.MouseButton1Click:Connect(
+                function()
+                    TextBtn.TextSize = 0
+                    TweenService:Create(
+                        TextBtn,
+                        TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+                        {TextSize = 15}
+                    ):Play()
+                    callback()
+                end
+            )
+            UserInputService.InputBegan:Connect(
+                function(input)
+                    if input.KeyCode == Enum.KeyCode[Key] then
+                        callback()
+                    end
+                end
+            )
+        end
         function main:Toggle(text, config, callback)
             config = config or false
             local toggled = config
