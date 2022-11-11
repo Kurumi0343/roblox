@@ -282,7 +282,7 @@ function Update:Window(text, savefolder)
 	UserTagLabel.BackgroundTransparency = 1.000
 	UserTagLabel.Size = UDim2.new(0, 81, 0, 27)
 	UserTagLabel.Font = Enum.Font.GothamSemibold
-	UserTagLabel.Text = "#"..tostring(math.random(0001, 99999))
+	UserTagLabel.Text = "#"..game.Players.LocalPlayer.UserId
 	UserTagLabel.Position = UDim2.new(0.30, 0, 0.2, 0)
 	UserTagLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 	UserTagLabel.TextSize = 10.00000
