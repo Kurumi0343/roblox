@@ -1117,7 +1117,7 @@ function Update:Window(text, savefolder)
 
             RealTextbox.Name = "RealTextbox"
             RealTextbox.Parent = Textbox
-            RealTextbox.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+            RealTextbox.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
             RealTextbox.BackgroundTransparency = 0
             RealTextbox.Position = UDim2.new(0, 360, 0, 4)
             RealTextbox.Size = UDim2.new(0, 100, 0, 24)
