@@ -928,7 +928,7 @@ function Update:Window(text, savefolder)
 
             bar1.Name = "bar1"
             bar1.Parent = bar
-            bar1.BackgroundColor3 = _G.Color
+            bar1.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
             bar1.BackgroundTransparency = 0
             bar1.Size = UDim2.new(set / max, 0, 0, 5)
 
