@@ -1099,7 +1099,7 @@ function Update:Window(text, savefolder)
             TextboxLabel.Text = text
             TextboxLabel.Size = UDim2.new(0, 145, 0, 31)
             TextboxLabel.Font = Enum.Font.GothamSemibold
-            TextboxLabel.TextColor3 = Color3.fromRGB(225, 225, 225)
+            TextboxLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
             TextboxLabel.TextSize = 16.000
             TextboxLabel.TextTransparency = 0
             TextboxLabel.TextXAlignment = Enum.TextXAlignment.Left
@@ -1112,7 +1112,7 @@ function Update:Window(text, savefolder)
             txtbtn.Size = UDim2.new(0, 468, 0, 29)
             txtbtn.Font = Enum.Font.SourceSans
             txtbtn.Text = ""
-            txtbtn.TextColor3 = Color3.fromRGB(0, 0, 0)
+            txtbtn.TextColor3 = Color3.fromRGB(255, 255, 255)
             txtbtn.TextSize = 14.000
 
             RealTextbox.Name = "RealTextbox"
@@ -1123,7 +1123,7 @@ function Update:Window(text, savefolder)
             RealTextbox.Size = UDim2.new(0, 100, 0, 24)
             RealTextbox.Font = Enum.Font.GothamSemibold
             RealTextbox.Text = value
-            RealTextbox.TextColor3 = Color3.fromRGB(225, 225, 225)
+            RealTextbox.TextColor3 = Color3.fromRGB(255, 255, 255)
             RealTextbox.TextSize = 11.000
             RealTextbox.TextTransparency = 0
 
