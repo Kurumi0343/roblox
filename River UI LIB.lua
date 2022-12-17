@@ -1061,7 +1061,7 @@ function Update:Window(text, savefolder)
             )
         end
 
-        function main:Textbox(text, disappear, callback)
+        function main:Textbox(text, value, callback)
             local Textbox = Instance.new("Frame")
             local TextboxCorner = Instance.new("UICorner")
             local Textboxx = Instance.new("Frame")
@@ -1122,19 +1122,12 @@ function Update:Window(text, savefolder)
             RealTextbox.Position = UDim2.new(0, 360, 0, 4)
             RealTextbox.Size = UDim2.new(0, 100, 0, 24)
             RealTextbox.Font = Enum.Font.GothamSemibold
-            RealTextbox.Text = ""
+            RealTextbox.Text = value
             RealTextbox.TextColor3 = Color3.fromRGB(225, 225, 225)
             RealTextbox.TextSize = 11.000
             RealTextbox.TextTransparency = 0
 
-            RealTextbox.FocusLost:Connect(
-                function()
-                    callback(RealTextbox.Text)
-                    if disappear then
-                        RealTextbox.Text = ""
-                    end
-                end
-            )
+
 
             UICorner.CornerRadius = UDim.new(0, 5)
             UICorner.Parent = RealTextbox
