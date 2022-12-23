@@ -980,7 +980,7 @@ function Update:Window(text, savefolder)
                 if set not ~= nil then
                     Value = set
                 else
-                    Value = min
+                    Value = min 
                 end
                 pcall(
                     function()
@@ -988,6 +988,7 @@ function Update:Window(text, savefolder)
                     end
                 )
             end
+			
 
             AHEHE.MouseButton1Down:Connect(
                 function()
