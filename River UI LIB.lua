@@ -977,7 +977,7 @@ function Update:Window(text, savefolder)
             local uis = game:GetService("UserInputService")
 
             if Value == nil then
-                Value = set
+                Value = set or min
                 pcall(
                     function()
                         callback(Value)
