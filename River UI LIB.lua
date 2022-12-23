@@ -271,7 +271,7 @@ function Update:Window(text, savefolder)
 	UserNameLabel.BackgroundTransparency = 1.000
 	UserNameLabel.Size = UDim2.new(0, 81, 0, 27)
 	UserNameLabel.Font = Enum.Font.GothamBold
-	UserNameLabel.Text = game.Players.LocalPlayer.DisplayName
+	UserNameLabel.Text = game.Players.LocalPlayer.Name
 	UserNameLabel.Position = UDim2.new(0.30, 0, -0.2, 0)
 	UserNameLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 	UserNameLabel.TextSize = 11.00000
