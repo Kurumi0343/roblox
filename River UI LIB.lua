@@ -987,8 +987,7 @@ function Update:Window(text, savefolder)
                         callback(Value)
                     end
                 )
-            end
-			
+            end	
 
             AHEHE.MouseButton1Down:Connect(
                 function()
