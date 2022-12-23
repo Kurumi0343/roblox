@@ -1,5 +1,5 @@
 do
-    local GUI = game.CoreGui:FindFirstChild("ThreadReaper")
+    local GUI = game.CoreGui:FindFirstChild("ShayneHacks")
     if GUI then
         GUI:Destroy()
     end
@@ -88,14 +88,14 @@ function Update:Window(text, savefolder)
     local abc = false
     local currentpage = ""
 
-    local ThreadReaper = Instance.new("ScreenGui")
-    ThreadReaper.Name = "ThreadReaper"
-    ThreadReaper.Parent = game.CoreGui
-    ThreadReaper.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    local ShayneHacks = Instance.new("ScreenGui")
+    ShayneHacks.Name = "ShayneHacks"
+    ShayneHacks.Parent = game.CoreGui
+    ShayneHacks.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
     local Main = Instance.new("Frame")
     Main.Name = "Main"
-    Main.Parent = ThreadReaper
+    Main.Parent = ShayneHacks
     Main.ClipsDescendants = true
     Main.AnchorPoint = Vector2.new(0.5, 0.5)
     Main.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
