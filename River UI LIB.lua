@@ -871,7 +871,9 @@ function Update:Window(text, savefolder)
             local valuecorner = Instance.new("UICorner")
             local TextBox = Instance.new("TextBox")
             local UICorner_2 = Instance.new("UICorner")
-
+            if set == nil then
+                set = min 
+            end
             Slider.Name = "Slider"
             Slider.Parent = MainFramePage
             Slider.BackgroundColor3 = _G.Color
@@ -978,11 +980,7 @@ function Update:Window(text, savefolder)
             local uis = game:GetService("UserInputService")
 
             if Value == nil then
-                if not set ~= nil then
-                    Value = set
-                else
-                    Value = min 
-                end
+                Value = set
                 pcall(
                     function()
                         callback(Value)
