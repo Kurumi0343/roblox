@@ -176,6 +176,7 @@ function Update:Window(text, savefolder)
     ScrollTab.CanvasSize = UDim2.new(0, 0, 0, 0)
     ScrollTab.ScrollBarThickness = 0
 
+	
     local PLL = Instance.new("UIListLayout")
     PLL.Name = "PLL"
     PLL.Parent = ScrollTab
