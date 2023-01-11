@@ -34,7 +34,7 @@ local TextService = game:GetService("TextService")
 
 local getcustomasset = getsynasset or getcustomasset
 
-local Highlight = (isfile and readfile and isfile("Highlight.lua") and loadstring(readfile("Highlight.lua"))()) or loadstring(game:HttpGet("https://github.com/Kurumi0343/roblox/blob/main/Highlight.lua"))()
+local Highlight = (isfile and readfile and isfile("Highlight.lua") and loadstring(readfile("Highlight.lua"))()) or loadstring(game:HttpGet("https://raw.githubusercontent.com/Kurumi0343/roblox/main/Highlight.lua"))()
 
 ---- GENERATED (kinda sorta mostly) BY GUI to LUA ----
 
