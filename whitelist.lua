@@ -1,3 +1,0 @@
-{
-  "NekoAkame03":true
-}
