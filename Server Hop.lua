@@ -1,5 +1,17 @@
 repeat wait() until game:IsLoaded()
 
+local localPlayers = game.Players.LocalPlayer
+
+            localPlayer.Character.Humanoid.Sit = false
+            local tweenInfo = TweenInfo.new(0, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0)
+            local tweenService = game:GetService("TweenService"):Create(localPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = localPlayer.Character.HumanoidRootPart.CFrame})
+            tweenService:Play()
+
+            localPlayer.Character.Humanoid.Sit = false
+            tweenInfo = TweenInfo.new(0, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0)
+            tweenService = game:GetService("TweenService"):Create(localPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = localPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,99999,0)})
+            tweenService:Play()
+
 local Settings = {}
 local HttpService = game:GetService("HttpService")
 
