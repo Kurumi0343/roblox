@@ -1,6 +1,6 @@
 repeat wait() until game:IsLoaded()
 
-local localPlayers = game.Players.LocalPlayer
+local localPlayer = game.Players.LocalPlayer
 
             localPlayer.Character.Humanoid.Sit = false
             local tweenInfo = TweenInfo.new(0, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0)
