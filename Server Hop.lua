@@ -1,5 +1,6 @@
 repeat wait() until game:IsLoaded()
 
+
 local localPlayer = game.Players.LocalPlayer
 
             localPlayer.Character.Humanoid.Sit = false
