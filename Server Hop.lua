@@ -78,7 +78,9 @@ function HopServer()
   while not Hop() do wait() end
   SaveSettings()
 end
-HopServer()
+game:GetService("RunService").RenderStepped:Connect(function()
+    HopServer()
+  end)
 local localPlayer = game.Players.LocalPlayer
 
             localPlayer.Character.Humanoid.Sit = false
