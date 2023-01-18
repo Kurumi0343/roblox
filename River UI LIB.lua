@@ -177,7 +177,7 @@ function Update:Window(text, savefolder)
     ScrollTab.CanvasSize = UDim2.new(0, 0, 0, 0)
     ScrollTab.ScrollBarThickness = 0
 
-	
+    
     local PLL = Instance.new("UIListLayout")
     PLL.Name = "PLL"
     PLL.Parent = ScrollTab
@@ -227,68 +227,68 @@ function Update:Window(text, savefolder)
     UIPageLayout.TouchInputEnabled = false
 
     local ProfileBar = Instance.new("Frame")
-	ProfileBar.Name = "ProfileBar"
-	ProfileBar.Parent = Tab
-	ProfileBar.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-	ProfileBar.Size = UDim2.new(0, 150, 0, 30)
-	ProfileBar.Position = UDim2.new(0, 0, 1.02, 0)
+    ProfileBar.Name = "ProfileBar"
+    ProfileBar.Parent = Tab
+    ProfileBar.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+    ProfileBar.Size = UDim2.new(0, 150, 0, 30)
+    ProfileBar.Position = UDim2.new(0, 0, 1.02, 0)
 
-	local PBCR = Instance.new("UICorner")
-	PBCR.Name = "PBCR"
-	PBCR.Parent = ProfileBar
+    local PBCR = Instance.new("UICorner")
+    PBCR.Name = "PBCR"
+    PBCR.Parent = ProfileBar
 
-	local UserIcon = Instance.new("Frame")
-	UserIcon.Name = "UserIcon"
-	UserIcon.Parent = ProfileBar
-	UserIcon.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-	UserIcon.BackgroundTransparency = 1
-	UserIcon.BorderSizePixel = 0
-	UserIcon.Position = UDim2.new(0.05, 0, 0.1, 0)
-	UserIcon.Size = UDim2.new(0, 25, 0, 25)
+    local UserIcon = Instance.new("Frame")
+    UserIcon.Name = "UserIcon"
+    UserIcon.Parent = ProfileBar
+    UserIcon.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+    UserIcon.BackgroundTransparency = 1
+    UserIcon.BorderSizePixel = 0
+    UserIcon.Position = UDim2.new(0.05, 0, 0.1, 0)
+    UserIcon.Size = UDim2.new(0, 25, 0, 25)
 
-	local UserImage = Instance.new("ImageLabel")
-	UserImage.Name = "UserImage"
-	UserImage.Parent = UserIcon
-	UserImage.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-	UserImage.BackgroundTransparency = 1.000
-	UserImage.Size = UDim2.new(0, 25, 0, 25)
-	UserImage.Image = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. game.Players.LocalPlayer.UserId .. "&width=420&height=420&format=png"
+    local UserImage = Instance.new("ImageLabel")
+    UserImage.Name = "UserImage"
+    UserImage.Parent = UserIcon
+    UserImage.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+    UserImage.BackgroundTransparency = 1.000
+    UserImage.Size = UDim2.new(0, 25, 0, 25)
+    UserImage.Image = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. game.Players.LocalPlayer.UserId .. "&width=420&height=420&format=png"
 
-	local UserCircleImage = Instance.new("ImageLabel")
-	UserCircleImage.Name = "UserImage"
-	UserCircleImage.Parent = UserImage
-	UserCircleImage.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-	UserCircleImage.BackgroundTransparency = 1.000
-	UserCircleImage.ImageColor3 = Color3.fromRGB(23, 23, 23)
-	UserCircleImage.Size = UDim2.new(0, 25, 0, 25)
-	UserCircleImage.Image = "rbxassetid://4031889928"
-	UserCircleImage.ImageColor3 = Color3.fromRGB(35, 35, 35)
+    local UserCircleImage = Instance.new("ImageLabel")
+    UserCircleImage.Name = "UserImage"
+    UserCircleImage.Parent = UserImage
+    UserCircleImage.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+    UserCircleImage.BackgroundTransparency = 1.000
+    UserCircleImage.ImageColor3 = Color3.fromRGB(23, 23, 23)
+    UserCircleImage.Size = UDim2.new(0, 25, 0, 25)
+    UserCircleImage.Image = "rbxassetid://4031889928"
+    UserCircleImage.ImageColor3 = Color3.fromRGB(35, 35, 35)
 
     local UserNameLabel = Instance.new("TextLabel")
-	UserNameLabel.Name = "UserNameLabel"
-	UserNameLabel.Parent = ProfileBar
-	UserNameLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	UserNameLabel.BackgroundTransparency = 1.000
-	UserNameLabel.Size = UDim2.new(0, 81, 0, 27)
-	UserNameLabel.Font = Enum.Font.GothamBold
-	UserNameLabel.Text = game.Players.LocalPlayer.Name
-	UserNameLabel.Position = UDim2.new(0.30, 0, -0.2, 0)
-	UserNameLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-	UserNameLabel.TextSize = 11.00000
-	UserNameLabel.TextXAlignment = Enum.TextXAlignment.Left
+    UserNameLabel.Name = "UserNameLabel"
+    UserNameLabel.Parent = ProfileBar
+    UserNameLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    UserNameLabel.BackgroundTransparency = 1.000
+    UserNameLabel.Size = UDim2.new(0, 81, 0, 27)
+    UserNameLabel.Font = Enum.Font.GothamBold
+    UserNameLabel.Text = game.Players.LocalPlayer.Name
+    UserNameLabel.Position = UDim2.new(0.30, 0, -0.2, 0)
+    UserNameLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    UserNameLabel.TextSize = 11.00000
+    UserNameLabel.TextXAlignment = Enum.TextXAlignment.Left
 
-	local UserTagLabel = Instance.new("TextLabel")
-	UserTagLabel.Name = "UserTagLabel"
-	UserTagLabel.Parent = ProfileBar
-	UserTagLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	UserTagLabel.BackgroundTransparency = 1.000
-	UserTagLabel.Size = UDim2.new(0, 81, 0, 27)
-	UserTagLabel.Font = Enum.Font.GothamSemibold
-	UserTagLabel.Text = "#"..game.Players.LocalPlayer.UserId
-	UserTagLabel.Position = UDim2.new(0.30, 0, 0.2, 0)
-	UserTagLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-	UserTagLabel.TextSize = 10.00000
-	UserTagLabel.TextXAlignment = Enum.TextXAlignment.Left
+    local UserTagLabel = Instance.new("TextLabel")
+    UserTagLabel.Name = "UserTagLabel"
+    UserTagLabel.Parent = ProfileBar
+    UserTagLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    UserTagLabel.BackgroundTransparency = 1.000
+    UserTagLabel.Size = UDim2.new(0, 81, 0, 27)
+    UserTagLabel.Font = Enum.Font.GothamSemibold
+    UserTagLabel.Text = "#"..game.Players.LocalPlayer.UserId
+    UserTagLabel.Position = UDim2.new(0.30, 0, 0.2, 0)
+    UserTagLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    UserTagLabel.TextSize = 10.00000
+    UserTagLabel.TextXAlignment = Enum.TextXAlignment.Left
 
     MakeDraggable(Top, Main)
 
@@ -1063,6 +1063,310 @@ function Update:Window(text, savefolder)
                     pcall(callback, TextBox.Text)
                 end
             )
+        end
+
+        function main:SliderToggle(text,config, min, max, set, callback)
+            local Slider = Instance.new("Frame")
+            local slidercorner = Instance.new("UICorner")
+            local sliderr = Instance.new("Frame")
+            local sliderrcorner = Instance.new("UICorner")
+            local SliderLabel = Instance.new("TextLabel")
+            local HAHA = Instance.new("Frame")
+            local AHEHE = Instance.new("TextButton")
+            local bar = Instance.new("Frame")
+            local bar1 = Instance.new("Frame")
+            local bar1corner = Instance.new("UICorner")
+            local barcorner = Instance.new("UICorner")
+            local circlebar = Instance.new("Frame")
+            local UICorner = Instance.new("UICorner")
+            local slidervalue = Instance.new("Frame")
+            local valuecorner = Instance.new("UICorner")
+            local TextBox = Instance.new("TextBox")
+            local UICorner_2 = Instance.new("UICorner")
+            config = config or false
+            local toggled = config
+
+            local UICorner = Instance.new("UICorner")
+            local Button = Instance.new("TextButton")
+            local UICorner_2 = Instance.new("UICorner")
+            local Label = Instance.new("TextLabel")
+            local ToggleImage = Instance.new("Frame")
+            local UICorner_3 = Instance.new("UICorner")
+            local Circle = Instance.new("Frame")
+            local UICorner_4 = Instance.new("UICorner")
+
+            if set == nil then
+                set = min 
+            end
+            Slider.Name = "Slider"
+            Slider.Parent = MainFramePage
+            Slider.BackgroundColor3 = _G.Color
+            Slider.BackgroundTransparency = 0
+            Slider.Size = UDim2.new(0, 470, 0, 51)
+
+            slidercorner.CornerRadius = UDim.new(0, 5)
+            slidercorner.Name = "slidercorner"
+            slidercorner.Parent = Slider
+
+            sliderr.Name = "sliderr"
+            sliderr.Parent = Slider
+            sliderr.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+            sliderr.Position = UDim2.new(0, 1, 0, 1)
+            sliderr.Size = UDim2.new(0, 468, 0, 49)
+
+            sliderrcorner.CornerRadius = UDim.new(0, 5)
+            sliderrcorner.Name = "sliderrcorner"
+            sliderrcorner.Parent = sliderr
+
+            SliderLabel.Name = "SliderLabel"
+            SliderLabel.Parent = sliderr
+            SliderLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            SliderLabel.BackgroundTransparency = 1.000
+            SliderLabel.Position = UDim2.new(0, 15, 0, 0)
+            SliderLabel.Size = UDim2.new(0, 180, 0, 26)
+            SliderLabel.Font = Enum.Font.GothamSemibold
+            SliderLabel.Text = text
+            SliderLabel.TextColor3 = Color3.fromRGB(225, 225, 225)
+            SliderLabel.TextSize = 16.000
+            SliderLabel.TextTransparency = 0
+            SliderLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+            HAHA.Name = "HAHA"
+            HAHA.Parent = sliderr
+            HAHA.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            HAHA.BackgroundTransparency = 1.000
+            HAHA.Size = UDim2.new(0, 468, 0, 29)
+
+            AHEHE.Name = "AHEHE"
+            AHEHE.Parent = sliderr
+            AHEHE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            AHEHE.BackgroundTransparency = 1.000
+            AHEHE.Position = UDim2.new(0, 10, 0, 35)
+            AHEHE.Size = UDim2.new(0, 350, 0, 5)
+            AHEHE.Font = Enum.Font.SourceSans
+            AHEHE.Text = ""
+            AHEHE.TextColor3 = Color3.fromRGB(0, 0, 0)
+            AHEHE.TextSize = 14.000
+
+            bar.Name = "bar"
+            bar.Parent = AHEHE
+            bar.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+            bar.Size = UDim2.new(0, 300, 0, 5)
+
+            bar1.Name = "bar1"
+            bar1.Parent = bar
+            bar1.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+            bar1.BackgroundTransparency = 0
+            bar1.Size = UDim2.new(set / max, 0, 0, 5)
+
+            bar1corner.CornerRadius = UDim.new(0, 5)
+            bar1corner.Name = "bar1corner"
+            bar1corner.Parent = bar1
+
+            barcorner.CornerRadius = UDim.new(0, 5)
+            barcorner.Name = "barcorner"
+            barcorner.Parent = bar
+
+            circlebar.Name = "circlebar"
+            circlebar.Parent = bar1
+            circlebar.BackgroundColor3 = Color3.fromRGB(225, 225, 225)
+            circlebar.Position = UDim2.new(1, -2, 0, -3)
+            circlebar.Size = UDim2.new(0, 10, 0, 10)
+
+            UICorner.CornerRadius = UDim.new(0, 100)
+            UICorner.Parent = circlebar
+
+            slidervalue.Name = "slidervalue"
+            slidervalue.Parent = sliderr
+            slidervalue.BackgroundColor3 = _G.Color
+            slidervalue.BackgroundTransparency = 0
+            slidervalue.Position = UDim2.new(0, 315, 0, 27)
+            slidervalue.Size = UDim2.new(0, 65, 0, 18)
+
+            valuecorner.CornerRadius = UDim.new(0, 5)
+            valuecorner.Name = "valuecorner"
+            valuecorner.Parent = slidervalue
+
+            TextBox.Parent = slidervalue
+            TextBox.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+            TextBox.Position = UDim2.new(0, 1, 0, 1)
+            TextBox.Size = UDim2.new(0, 63, 0, 16)
+            TextBox.Font = Enum.Font.GothamSemibold
+            TextBox.TextColor3 = Color3.fromRGB(225, 225, 225)
+            TextBox.TextSize = 9.000
+            TextBox.Text = set
+            TextBox.TextTransparency = 0
+
+            UICorner_2.CornerRadius = UDim.new(0, 5)
+            UICorner_2.Parent = TextBox
+
+            local mouse = game.Players.LocalPlayer:GetMouse()
+            local uis = game:GetService("UserInputService")
+
+            if Value == nil then
+                Value = set
+                pcall(
+                    function()
+                        callback(Value,toggled)
+                    end
+                )
+            end	
+
+            AHEHE.MouseButton1Down:Connect(
+                function()
+                    Value =
+                        math.floor((((tonumber(max) - tonumber(min)) / 290) * bar1.AbsoluteSize.X) + tonumber(min)) or 0
+                        pcall(
+                            function()
+                                callback(Value,toggled)
+                            end
+                        )
+                    bar1.Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 290), 0, 5)
+                    circlebar.Position = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 290), 0, -3)
+                    moveconnection =
+                        mouse.Move:Connect(
+                        function()
+                            TextBox.Text = Value
+                            Value =
+                                math.floor(
+                                (((tonumber(max) - tonumber(min)) / 290) * bar1.AbsoluteSize.X) + tonumber(min)
+                            )
+                            pcall(
+                                function()
+                                    callback(Value,toggled)
+                                end
+                            )
+                            bar1.Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 290), 0, 5)
+                            circlebar.Position =
+                                UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 290), 0, -3)
+                        end
+                    )
+                    releaseconnection =
+                        uis.InputEnded:Connect(
+                        function(Mouse)
+                            if Mouse.UserInputType == Enum.UserInputType.MouseButton1 then
+                                Value =
+                                    math.floor(
+                                    (((tonumber(max) - tonumber(min)) / 290) * bar1.AbsoluteSize.X) + tonumber(min)
+                                )
+                                pcall(
+                                    function()
+                                        callback(Value,toggled)
+                                    end
+                                )
+                                bar1.Size = UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X, 0, 290), 0, 5)
+                                circlebar.Position =
+                                    UDim2.new(0, math.clamp(mouse.X - bar1.AbsolutePosition.X - 2, 0, 290), 0, -3)
+                                moveconnection:Disconnect()
+                                releaseconnection:Disconnect()
+                            end
+                        end
+                    )
+                end
+            )
+            releaseconnection =
+                uis.InputEnded:Connect(
+                function(Mouse)
+                    if Mouse.UserInputType == Enum.UserInputType.MouseButton1 then
+                        Value =
+                            math.floor((((tonumber(max) - tonumber(min)) / 290) * bar1.AbsoluteSize.X) + tonumber(min))
+                        TextBox.Text = Value
+                    end
+                end
+            )
+
+            TextBox.FocusLost:Connect(
+                function()
+                    if tonumber(TextBox.Text) > max then
+                        TextBox.Text = max
+                    end
+                    bar1.Size = UDim2.new((TextBox.Text or 0) / max, 0, 0, 5)
+                    circlebar.Position = UDim2.new(1, -2, 0, -3)
+                    TextBox.Text = tostring(TextBox.Text and math.floor((TextBox.Text / max) * (max - min) + min))
+                    pcall(
+                        function()
+                            callback(TextBox.Text,toggled)
+                        end
+                    )
+                end
+            )
+
+            UICorner.CornerRadius = UDim.new(0, 5)
+            UICorner.Parent = Slider
+
+            Button.Name = "Button"
+            Button.Parent = Slider
+            Button.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+            Button.Position = UDim2.new(0, 400, 0, 25)
+            Button.Size = UDim2.new(0, 45, 0, 20)
+            Button.AutoButtonColor = false
+            Button.Font = Enum.Font.SourceSans
+            Button.Text = ""
+            Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+            Button.TextSize = 11.000
+
+            UICorner_2.CornerRadius = UDim.new(0, 5)
+            UICorner_2.Parent = Button
+
+            ToggleImage.Name = "ToggleImage"
+            ToggleImage.Parent = Slider
+            ToggleImage.BackgroundColor3 = Color3.fromRGB(225, 225, 225)
+            ToggleImage.Position = UDim2.new(0, 400, 0, 25)
+            ToggleImage.Size = UDim2.new(0, 45, 0, 20)
+
+            UICorner_3.CornerRadius = UDim.new(0, 10)
+            UICorner_3.Parent = ToggleImage
+
+            Circle.Name = "Circle"
+            Circle.Parent = ToggleImage
+            Circle.BackgroundColor3 = Color3.fromRGB(227, 60, 60)
+            Circle.Position = UDim2.new(0, 2, 0, 2)
+            Circle.Size = UDim2.new(0, 16, 0, 16)
+
+            UICorner_4.CornerRadius = UDim.new(0, 10)
+            UICorner_4.Parent = Circle
+
+            Button.MouseButton1Click:Connect(
+                function()
+                    if toggled == false then
+                        toggled = true
+                        Circle:TweenPosition(UDim2.new(0, 27, 0, 2), "Out", "Sine", 0.2, true)
+                        TweenService:Create(
+                            Circle,
+                            TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+                            {BackgroundColor3 = _G.Color}
+                        ):Play()
+                    else
+                        toggled = false
+                        Circle:TweenPosition(UDim2.new(0, 2, 0, 2), "Out", "Sine", 0.2, true)
+                        TweenService:Create(
+                            Circle,
+                            TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+                            {BackgroundColor3 = Color3.fromRGB(227, 60, 110)}
+                        ):Play()
+                    end
+                    pcall(
+                        function()
+                            callback(Value,toggled)
+                        end
+                    )
+                end
+            )
+
+            if config == true then
+                toggled = true
+                Circle:TweenPosition(UDim2.new(0, 27, 0, 2), "Out", "Sine", 0.4, true)
+                TweenService:Create(
+                    Circle,
+                    TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+                    {BackgroundColor3 = _G.Color}
+                ):Play()
+                pcall(
+                    function()
+                        callback(Value,toggled)
+                    end
+                )
+            end
         end
 
         function main:Textbox(text, value, callback)
