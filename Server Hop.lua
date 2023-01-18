@@ -80,8 +80,7 @@ function HopServer()
 end
 game:GetService("RunService").RenderStepped:Connect(function()
     HopServer()
-  end)
-local localPlayer = game.Players.LocalPlayer
+    local localPlayer = game.Players.LocalPlayer
 
             localPlayer.Character.Humanoid.Sit = false
             local tweenInfo = TweenInfo.new(0, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0)
@@ -92,3 +91,5 @@ local localPlayer = game.Players.LocalPlayer
             tweenInfo = TweenInfo.new(0, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0)
             tweenService = game:GetService("TweenService"):Create(localPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = localPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,99999,0)})
             tweenService:Play()
+  end)
+
