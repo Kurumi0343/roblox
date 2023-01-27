@@ -18,8 +18,8 @@ end
 function ReadSetting()
   local s,e = pcall(function()
       local HttpService = game:GetService("HttpService")
-      if not isfolder("Sea Hub") then
-          makefolder("Sea Hub")
+      if not isfolder("ThreadReaper") then
+          makefolder("ThreadReaper")
       end
       return HttpService:JSONDecode(readfile("ThreadReaper/" .. SaveFileName))
   end)
