@@ -84,7 +84,7 @@ function Update:Window(text, savefolder)
 		end)
 	end
 	local json
-	local uihide = false
+	local uihide = true
 	local abc = false
 	local currentpage = ""
 
