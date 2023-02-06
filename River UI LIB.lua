@@ -102,7 +102,7 @@ function Update:Window(text, savefolder)
 	Main.Position = UDim2.new(0.5, 0, 0.5, 0)
 	Main.Size = UDim2.new(0, 0, 0, 0)
 
-	Main:TweenSize(UDim2.new(0, 656, 0, 400), "Out", "Quad", 0.4, true)
+	Main:TweenSize(UDim2.new(0, 0, 0, 0), "In", "Quad", 0.4, true)
 
 	local MCNR = Instance.new("UICorner")
 	MCNR.Name = "MCNR"
@@ -1518,7 +1518,7 @@ function Update:Window(text, savefolder)
 			Line.Position = UDim2.new(0, 0, 0, 10)
 			Line.Size = UDim2.new(0, 470, 0, 1)
 		end
-		Main:TweenSize(UDim2.new(0, 0, 0, 0), "In", "Quad", 0.4, true)
+		
 		return main
 	end
 	return uitab
