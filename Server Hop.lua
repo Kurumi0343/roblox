@@ -78,18 +78,22 @@ function HopServer()
   while not Hop() do wait() end
   SaveSettings()
 end
-game:GetService("RunService").RenderStepped:Connect(function()
-    HopServer()
-    local localPlayer = game.Players.LocalPlayer
-
-            localPlayer.Character.Humanoid.Sit = false
-            local tweenInfo = TweenInfo.new(0, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0)
-            local tweenService = game:GetService("TweenService"):Create(localPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = localPlayer.Character.HumanoidRootPart.CFrame})
-            tweenService:Play()
-
-            localPlayer.Character.Humanoid.Sit = false
-            tweenInfo = TweenInfo.new(0, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0)
-            tweenService = game:GetService("TweenService"):Create(localPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = localPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,99999,0)})
-            tweenService:Play()
-  end)
-
+game:GetService("UserInputService").InputBegan:Connect(function(input,gamePorc)
+    if input.UserInputType == Enum.UserInputType.Keyboard then
+        if input.KeyCode == Enum.KeyCode.F5 then
+            game:GetService("RunService").RenderStepped:Connect(function()
+                HopServer()
+                local localPlayer = game.Players.LocalPlayer
+                localPlayer.Character.Humanoid.Sit = false
+                local tweenInfo = TweenInfo.new(0, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0)
+                local tweenService = game:GetService("TweenService"):Create(localPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = localPlayer.Character.HumanoidRootPart.CFrame})
+                tweenService:Play()
+            
+                localPlayer.Character.Humanoid.Sit = false
+                tweenInfo = TweenInfo.new(0, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0)
+                tweenService = game:GetService("TweenService"):Create(localPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = localPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,99999,0)})
+                tweenService:Play()
+            end)
+        end
+    end
+end)
