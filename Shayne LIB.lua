@@ -1,4 +1,4 @@
-do
+    do
         local GUI = game.CoreGui:FindFirstChild("ShayneHacks")
         if GUI then
             GUI:Destroy()
@@ -107,8 +107,9 @@ do
         Name.Parent = Top
         Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         Name.BackgroundTransparency = 1.000
-        Name.Position = UDim2.new(0.0609756112, 0, 0, 0)
-        Name.Size = UDim2.new(0, 120, 0, 27)
+        Name.Position = UDim2.new(0.0139756112, 0, 0, 0)
+        Name.Size = UDim2.new(0, 0, 0, 27)
+        Name.AutomaticSize = Enum.AutomaticSize.X
         Name.Font = Enum.Font.GothamSemibold
         Name.Text = text
         Name.TextColor3 = Color3.fromRGB(225, 225, 225)
