@@ -1,4 +1,7 @@
-    do
+repeat task.wait(1.1) until game:IsLoaded()
+
+
+do
         local GUI = game.CoreGui:FindFirstChild("ShayneHacks")
         if GUI then
             GUI:Destroy()
